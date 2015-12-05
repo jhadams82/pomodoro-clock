@@ -1,0 +1,25 @@
+body {
+  background: url('http://i1073.photobucket.com/albums/w381/jhadams82/congruent_outline_zpssbqskg4q.png');
+}
+
+a, a:link, a:visited, a:hover, a:active {
+  color: #5cb85c;
+  text-decoration: none;
+}
+
+.clock-face {
+  margin: 2.5% auto;
+  background: #191716;
+  border-radius: .5em;
+  padding: .5em;
+  text-align: center;
+  color: #5cb85c;
+  font-family: "Righteous", sans-serif;
+  font-size: 4em;
+}
+
+.btn {
+  font-family: "Verdana", sans-serif;
+  font-weight: bold;
+  font-size: .35em;
+}
