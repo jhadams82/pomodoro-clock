@@ -1,23 +1,26 @@
 $(document).ready(function() {
 
   var bell = $('#sound')[0];
-  var count_start = 5;
-  var count = count_start;
+  var work_count_start = 5;
+  var break_count_start = 1;
+  var work_count = work_count_start;
+  var break_count = break_count_start;
   var seconds_interval;
 
-  function pad (str, max) {
+  /* LEADING ZERO PADDING */
+  function pad(str) {
     str = str.toString();
-    return str.length < max ? pad("0" + str, max) : str;
+    return str.length < 2 ? "0" + str : str;
 }
 
   /* INITIAL COUNTER SET */
-  $('.minute_hand').text("00");
-  $('.second_hand').text(pad(count_start, 2));
+  $('.work_timer').text(pad(work_count_start));
+  $('.break_timer').text(pad(break_count_start));
 
   /* COUNT DOWN */
-  function test_countdown() {
+  function countdown() {
     count--;
-    $('.second_hand').text(pad(count, 2));
+    $('.work_timer').text(pad(work_count));
     if (count == 0) {
       clearInterval(seconds_interval);
       bell.play();
@@ -28,13 +31,13 @@ $(document).ready(function() {
   $('#start').click(function() {
     if ($(this).hasClass('disabled')) return;
     $(this).addClass('disabled');
-    seconds_interval = setInterval(test_countdown, 1000);
+    seconds_interval = setInterval(countdown, 1000);
   });
 
   /* CLICK RESET */
   $('#clock_reset').click(function() {
-    $('.second_hand').text(pad(count_start, 2));
-    count = count_start;
+    $('.work_timer').text(pad(count_start));
+    work_count = work_count_start;
     clearInterval(seconds_interval);
     $('#start').removeClass('disabled');
     bell.play();
