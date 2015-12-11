@@ -1,3 +1,7 @@
+*, *:link, *:visited, *:hover, *:active, *:focus {
+  outline: none; !important
+}
+
 body {
   background: url('http://i1073.photobucket.com/albums/w381/jhadams82/congruent_outline_zpssbqskg4q.png');
 }
@@ -8,7 +12,6 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 .clock-face {
-  margin: 2.5% auto;
   background: #191716;
   border-radius: .5em;
   padding: .5em;
@@ -18,8 +21,37 @@ a, a:link, a:visited, a:hover, a:active {
   font-size: 4em;
 }
 
-.btn {
+#work-timer,
+#break-timer {
+  display: inline-block;
+}
+
+.timer-btn,
+.timer-btn:focus,
+.timer-lbl {
+  background: #191716;
+  border-color: #5cb85c;
+  color: #5cb85c;
+  -webkit-transition: background-color .25s;
+  -moz-transition: background-color .25s;
+  -o-transition: background-color .25s;
+  -ms-transition: background-color .25s;
+  transition: background-color .25s;
+}
+
+.timer-btn:hover {
+  background-color: #333;
+  color: #5cb85c;
+}
+
+.timer-control {
+  width: 1em;
+  margin: 0 auto;
+}
+
+.my-btn {
   font-family: "Verdana", sans-serif;
   font-weight: bold;
   font-size: .35em;
+  color: #222;
 }

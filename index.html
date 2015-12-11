@@ -1,20 +1,45 @@
 <link href='https://fonts.googleapis.com/css?family=Sigmar+One|Righteous' rel='stylesheet' type='text/css'>
 
+
 <div class="container">
- <div class="clock-face">
-   <div class="row">
-     <div class="col-md-4">
+ <div class="row">
+   <div class="col-md-8 col-md-offset-2 clock-face">
+
+     <div id="work-timer">
+
+       <span class="display"></span>
+       <div class="input-group timer-control">
+         <span class="input-group-btn">
+           <button class="btn btn-secondary  timer-btn" type="button">-</button>
+         </span>
+         <span class="form-control timer-lbl">WORK</span>
+         <span class="input-group-btn">
+           <button class="btn btn-secondary timer-btn" type="button">+</button>
+         </span>
+       </div>
 
      </div>
-     <div class="col-md-4">
-       <span class="work_timer"></span>:<span class="break_timer"></span>
-       <br>
 
-       <button id="start" class="btn btn-success">
+     <div id="break-timer">
+
+       <span class="display"></span>
+       <div class="input-group timer-control">
+         <span class="input-group-btn">
+           <button class="btn btn-secondary timer-btn" type="button">-</button>
+         </span>
+         <span class="form-control timer-lbl">BREAK</span>
+         <span class="input-group-btn">
+           <button class="btn btn-secondary timer-btn" type="button">+</button>
+         </span>
+       </div>
+
+     </div>
+     <div id="controls">
+
+       <button id="start" class="btn btn-success my-btn">
          Start
        </button>
-
-       <button id="clock_reset" class="btn btn-danger">
+       <button id="clock_reset" class="btn btn-danger my-btn">
          Reset
        </button>
        <br>
@@ -28,9 +53,8 @@
          <source src="http://www.soundjay.com/phone/telephone-ring-01a.mp3" type="audio/mpeg">
          Audio isn't loading for some reason
        </audio>
-     </div>
-     <div class="col-md-4">
 
      </div>
+   </div>
  </div>
 </div>
