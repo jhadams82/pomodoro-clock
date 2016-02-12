@@ -12,7 +12,6 @@ $(document).ready(function() {
   /* MAKE INTERVAL OBJ GLOBAL */
   var seconds_interval;
 
-
   /* LEADING ZERO PADDING */
   function pad(str) {
     str = str.toString();
@@ -22,7 +21,6 @@ $(document).ready(function() {
   /* INITIAL COUNTER SET */
   $('#work-timer .display').text(pad(work_timer_start));
   $('#break-timer .display').text(pad(break_timer_start));
-
 
   /* BREAK COUNT DOWN */
   function break_countdown() {
@@ -45,7 +43,6 @@ $(document).ready(function() {
       seconds_interval = setInterval(break_countdown, 1000);
     }
   }
-
 
   /* CLICK WORK DEC */
   $('#work-timer').find('button').first().click( function() {
@@ -71,7 +68,6 @@ $(document).ready(function() {
     $('#break-timer .display').text(pad(break_timer));
   });
 
-
   /* CLICK START */
   $('#start').click(function() {
     if ($(this).hasClass('disabled')) return;
@@ -92,5 +88,4 @@ $(document).ready(function() {
   $('#sound_test').click(function() {
     bell.play();
   });  */
-
 });
